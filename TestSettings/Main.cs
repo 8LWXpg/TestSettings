@@ -12,9 +12,9 @@ namespace Community.PowerToys.Run.Plugin.TestSettings
         // current value of the setting
         private bool _setting;
 
-        private PluginInitContext _context;
+        private PluginInitContext? _context;
 
-        private string _iconPath;
+        private string? _iconPath;
 
         private bool _disposed;
 
@@ -43,7 +43,7 @@ namespace Community.PowerToys.Run.Plugin.TestSettings
 
         public List<Result> Query(Query query)
         {
-            return new List<Result>();
+            return [];
         }
 
         public void Init(PluginInitContext context)
@@ -70,14 +70,7 @@ namespace Community.PowerToys.Run.Plugin.TestSettings
 
         private void UpdateIconPath(Theme theme)
         {
-            if (theme == Theme.Light || theme == Theme.HighContrastWhite)
-            {
-                _iconPath = "Images/TestSettings.light.png";
-            }
-            else
-            {
-                _iconPath = "Images/TestSettings.dark.png";
-            }
+            _iconPath = theme is Theme.Light or Theme.HighContrastWhite ? "Images/TestSettings.light.png" : "Images/TestSettings.dark.png";
         }
 
         public Control CreateSettingPanel()
