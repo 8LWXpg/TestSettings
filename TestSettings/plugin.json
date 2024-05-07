@@ -1,0 +1,14 @@
+{
+  "ID": "7a13c669be7d4ec7a935f1ff19d2319f",
+  "ActionKeyword": "plug",
+  "Disabled": false,
+  "IsGlobal": false,
+  "Name": "TestSettings",
+  "Author": "",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "",
+  "ExecuteFileName": "Community.PowerToys.Run.Plugin.TestSettings.dll",
+  "IcoPathDark": "Images\\TestSettings.dark.png",
+  "IcoPathLight": "Images\\TestSettings.light.png"
+}
