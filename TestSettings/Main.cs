@@ -24,8 +24,8 @@ namespace Community.PowerToys.Run.Plugin.TestSettings
 
         public static string PluginID => "7a13c669be7d4ec7a935f1ff19d2319f";
 
-        public IEnumerable<PluginAdditionalOption> AdditionalOptions => new List<PluginAdditionalOption>()
-        {
+        public IEnumerable<PluginAdditionalOption> AdditionalOptions =>
+        [
             new ()
             {
                 PluginOptionType = PluginAdditionalOption.AdditionalOptionType.Numberbox,
@@ -33,8 +33,9 @@ namespace Community.PowerToys.Run.Plugin.TestSettings
                 DisplayLabel = "Test NumberBox",
                 NumberValue = 5,
                 NumberBoxMin = 2,
+                NumberBoxMax = 10,
             },
-        };
+        ];
 
         public void UpdateSettings(PowerLauncherPluginSettings settings)
         {
